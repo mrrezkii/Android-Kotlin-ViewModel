@@ -2,8 +2,12 @@ package com.newbiexpert.android_kotlin_learnviewmodel
 
 import androidx.lifecycle.ViewModel
 
-class MainActivityViewModel : ViewModel() {
+class MainActivityViewModel(startingTotal: Int) : ViewModel() {
     private var total: Int = 0
+
+    init {
+        total = startingTotal
+    }
 
     fun getTotal(): Int {
         return total
