@@ -3,13 +3,13 @@ package com.newbiexpert.android_kotlin_learnviewmodel
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel : ViewModel() {
-    private var count = 0
+    private var total: Int = 0
 
-    fun getCurrentCount(): Int {
-        return count
+    fun getTotal(): Int {
+        return total
     }
 
-    fun getUpdateCount(): Int {
-        return ++count
+    fun setTotal(input: Int) {
+        total += input
     }
 }
